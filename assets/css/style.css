@@ -23,18 +23,11 @@ nav {
     height: 100vh;
     /* background-position:center ; */
     background-size: cover;
-    padding-top: 50px;
-    
+    text-align: center;
+   
 }
-.title {
-    font-size: 60px;
-}
-.subtitle {
-    font-size: 16px;
-}
-/* .hero-info { */
-    /* width: 50%; */
-    /* padding-top: 48px; */
-    
+/* .tracking-in-expand { */
+/* -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; */
+	        /* animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; */
+	
 /* } */
-
