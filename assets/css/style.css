@@ -275,39 +275,6 @@ nav {
 
 }
 
-.images {
-    display: flex;
-    gap: 5rem;
-    width: 100%;
-    /* margin-left: 10%; */
-    justify-content: space-evenly;
-}
-
-.img1 {
-    border: 1px solid #222222;
-    border-radius: 200px;
-    width: 25vw;
-    padding: 7%;
-    height: 55vh;
-
-}
-
-.img2 {
-    border: 1px solid #222222;
-    border-radius: 200px;
-    width: 25vw;
-    padding: 7%;
-    height: 55vh;
-}
-
-.img3 {
-    border: 1px solid #222222;
-    border-radius: 200px;
-    width: 25vw;
-    padding: 7%;
-    height: 55vh;
-}
-
 
 .services {
     display: flex;
@@ -490,15 +457,8 @@ nav {
 }
 
 
-.fa-twitter {
-    color: olive;
 
-
-}
-
-
-
-.fa-facebook {
+.fa-github {
     color: olive;
 
 }
