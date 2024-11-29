@@ -33,23 +33,47 @@ nav {
     background-image: url(../images/headshot.jpg);
     background-attachment: fixed;
     height: 100vh;
-    /* background-position:center ; */
     background-size: cover;
     text-align: center;
     padding-left: 20%;
 }
 
-#certifications {
-    display: flex;
-    justify-content: space-between;
-    background-color: #222222;
-    width: 100%;
-    /* margin-top: 10%; */
-    gap: 5rem;
-    padding: 5%;
-    
 
+.carousel-container {
+  height: 150px; 
+  display: flex;
+  align-items: center;
+  overflow: hidden; 
 }
+
+.carousel-track {
+  display: flex; 
+  align-items: center;
+  gap: 30px; 
+  width: fit-content;
+}
+
+.carousel-track img {
+  height: 100%; 
+  object-fit: contain; 
+  flex-shrink: 0;
+  margin: 0; 
+}
+
+/* Keyframes for Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite; 
+}
+
 
 .cert {
     background-color: #222222;
