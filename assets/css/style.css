@@ -1,13 +1,4 @@
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 71px;
-    text-align: center;
-    background-color: #33333386;
 
-
-}
 
 * {
     width: 100%;
@@ -16,12 +7,113 @@ nav {
 
 }
 
+
+
+
+
+/* General Styles for Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33333386;
+    height: 71px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 0 1rem;
+    z-index: 50;
+}
+
 .nav-items {
     display: flex;
-    flex-direction: row;
+    gap: 1rem;
     justify-content: space-evenly;
     width: 70%;
 }
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Toggle Menu Button for Mobile */
+.menu-toggle {
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    bottom: -8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding-top: 1rem;
+        gap: 1rem;
+        background-color: #333333;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .nav-items.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .menu-icon::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+}
+
 
 .text-white {
     color: white;
@@ -29,14 +121,36 @@ nav {
 
 
 
-.hero {
+
+/* .hero {
     background-image: url(../images/headshot.jpg);
     background-attachment: fixed;
     height: 100vh;
     background-size: cover;
-    text-align: center;
-    padding-left: 20%;
+    background-position: center;
+    position: relative;
+} */
+
+.hero {
+    background-image: url(../images/hero2.jpg);
+    background-color: #333333;
+    background-size: 60%;  /* Ensure the image covers the entire hero section */
+    background-position: center;  /* Center the image to prevent it from being cropped */
+    background-repeat: no-repeat;  /* Prevent the background from repeating */
+    height: 100vh;  /* Full viewport height */
+    width: 100%;  /* Full width */
+    position: relative;  /* Keep other elements positioned correctly */
 }
+
+
+.hero .absolute {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero .relative {
+    z-index: 10; /* Ensures text is above the overlay */
+}
+
 
 
 .carousel-container {
@@ -60,135 +174,27 @@ nav {
   margin: 0; 
 }
 
-/* Keyframes for Marquee Animation */
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); 
-  }
-}
-
-.animate-marquee {
-  animation: marquee 10s linear infinite; 
-}
-
-
-.cert {
-    background-color: #222222;
-}
-
-#resume {
-    background-color: #222222;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 100%;
-    height: 220vh;
-    text-align: justify;
 
 
 
-}
-
-.skills {
-    width: 70%;
-    height: 45vh;
-    padding-right: 50%;
-    margin-left: 5%;
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: justify;
-}
 
 
-
-.cert1 {
-    transition: transform .9s;
-    
-}
-
-.cert1 :hover {
-    transform: scale(1.9);
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-
-.cert2 {
-    transition: transform .9s;
-}
-
-.cert2 :hover {
-    transform: scale(1.9);
-    background-color: black;
-    border-radius: 15px;
-}
-
-.cert3 {
-    transition: transform .9s;
-}
-
-.cert3 :hover {
-    transform: scale(1.9);
-    background-color: black;
-    border-radius: 15px;
-}
-
-.cert4 {
-    transition: transform .9s;
-}
-
-.cert4 :hover {
-    transform: scale(1.9);
-    background-color: black;
-    border-radius: 15px;
-}
-
-.cert5 {
-    transition: transform .9s;
-}
-
-.cert5 :hover {
-    transform: scale(1.9);
-    background-color: black;
-    border-radius: 15px;
-}
-
-
-.experiences {
-    padding: 30px;
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 4px solid transparent;
-    border-radius: 7px;
-    margin-right: 40%;
-    width: 80%;
-
-
-}
 
 
 
 #about {
     display: flex;
+    flex-direction: column; /* Default to a single column */
     gap: 5rem;
     background-color: #222222;
     width: 100%;
     padding-bottom: 10%;
+}
 
-
-
+@media (min-width: 1024px) { /* Two columns on large screens */
+    #about {
+        flex-direction: row;
+    }
 }
 
 .aboutp {
@@ -199,15 +205,29 @@ nav {
     transition: .3s all ease;
     border: 4px solid transparent;
     border-radius: 7px;
-    width: 80vw;
+    width: 80%;
     line-height: 1.2;
-    margin-left: 5%;
+    margin: auto;
+}
 
+@media (min-width: 1024px) {
+    .aboutp {
+        width: 50%; /* Adjust width for larger screens */
+        margin-left: 5%;
+    }
 }
 
 .about-pic {
-    width: 40%;
-    padding-right: 10%;
+    width: 100%; /* Full width for smaller screens */
+    padding-right: 0;
+    margin: auto;
+}
+
+@media (min-width: 1024px) {
+    .about-pic {
+        width: 40%; /* Adjust width for larger screens */
+        padding-right: 10%;
+    }
 }
 
 
@@ -256,219 +276,104 @@ nav {
 }
 
 
+
+
+
+
+
 .button-flex {
     display: flex;
-    gap: 4rem;
+    flex-direction: column; /* Stack buttons on smaller screens */
+    gap: 1rem; /* Adjust gap between buttons */
     padding-top: 5%;
+    align-items: center; /* Center buttons */
 }
 
-.button1 {
-    border: 1px solid olive;
-    background-color: olive;
-    border-radius: 15px;
-    width: 50%;
-    height: 6vh;
+@media (min-width: 768px) { /* For medium to larger screens */
+    .button-flex {
+        flex-direction: row; /* Align buttons horizontally */
+        justify-content: center; /* Center horizontally */
+        gap: 4rem; /* Increase gap for larger screens */
+    }
 }
 
+.button1,
 .button2 {
-    border: 1px solid olive;
-    background-color: olive;
-    border-radius: 15px;
-    width: 50%;
-    height: 6vh;
-
+    padding: 10px 20px; /* Adjust padding for buttons */
+    font-size: 1rem; /* Ensure font size is responsive */
+    border: none;
+    border-radius: 100px;
+    background-color: olive; /* Default background color */
+    color: white;
+    cursor: pointer;
 }
 
-.client-testimonials {
-    display: flex;
-    gap: 7rem;
-    width: 100%;
-    text-align: justify;
-    padding: 5%;
-
+.button1:hover,
+.button2:hover {
+    background-color: #ffc107; /* Yellow on hover */
+    transform: scale(1.05); /* Scale on hover for better UX */
 }
+
+
+
 
 
 .services {
     display: flex;
-    gap: 5rem;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 2rem; /* Space between items */
     text-align: justify;
     padding: 5%;
     width: 100%;
+    flex-direction: column; /* Default to single column for smaller screens */
 }
 
-
-.service1 {
-    width: 40%;
-    height: 60vh;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 5%;
+.service1, .service2, .service3 {
+    width: 100%; /* Default width for smaller screens */
+    padding: 2%;
     line-height: 1.5;
-    /* margin-left: 5%; */
     background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
+    transition: 0.3s all ease;
     border: 1px solid transparent;
     border-radius: 7px;
     text-align: justify;
 }
 
-.service2 {
-    width: 40%;
-    height: 55vh;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 10%;
-    /* padding-top: 10%; */
-    line-height: 1.5;
-    /* margin-left: 5%; */
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: centre;
-}
+@media (min-width: 768px) {
+    .services {
+        flex-direction: row; /* Change to row for larger screens */
+        justify-content: space-between; /* Distribute space evenly */
+    }
 
-.service3 {
-    width: 40%;
-    height: 60vh;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 5%;
-    line-height: 1.5;
-    /* margin-left: 5%; */
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: justify;
+    .service1, .service2, .service3 {
+        width: 30%; /* Allocate each service one-third of the row */
+    }
 }
 
 
-.footer {
+footer {
     display: flex;
+    justify-content: center;
+    padding: 1.5rem 1rem;
 }
 
-.footer2 {
+footer div {
+    flex: 1; /* Allows flexible width for each column */
+    text-align: left;
+}
+
+footer {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.input1 {
-    width: 80%;
-    height: 7vh;
-    padding-right: 50%;
-    margin-left: 5%;
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: justify;
-    margin-bottom: 2%;
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row; /* Change to row on larger screens */
+        justify-content: space-between;
+    }
 }
-
-
-.input2 {
-    width: 80%;
-    height: 7vh;
-    padding-right: 50%;
-    margin-left: 5%;
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: justify;
-    margin-bottom: 2%;
-}
-
-
-.input3 {
-    width: 80%;
-    height: 7vh;
-    padding-right: 50%;
-    margin-left: 5%;
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: justify;
-    margin-bottom: 2%;
-
-}
-
-.input4 {
-    width: 80%;
-    height: 40%;
-    padding-right: 50%;
-    padding-bottom: 20%;
-    margin-left: 5%;
-    background: #333;
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    border: 1px solid transparent;
-    border-radius: 7px;
-    text-align: justify;
-}
-
-
-.send-button {
-    border: 1px solid black;
-    background-color: olive;
-    width: 27%;
-    height: 7vh;
-    border-radius: 50px;
-    padding-inline: 5%;
-    margin-left: 5%;
-    margin-top: 5%;
-
-}
-
-.ct1 {
-
-    height: 42vh;
-    padding-right: 2%;
-    padding-left: 2%;
-    padding-top: 2%;
-    background: #333;
-    border: 1px solid transparent;
-    border-radius: 7px;
-
-
-}
-
-.ct2 {
-    height: 42vh;
-    padding-right: 2%;
-    padding-left: 2%;
-    padding-top: 2%;
-    background: #333;
-    border: 1px solid transparent;
-    border-radius: 7px;
-
-}
-
-.ct3 {
-    height: 42vh;
-    padding-right: 2%;
-    padding-left: 2%;
-    padding-top: 2%;
-    background: #333;
-    border: 1px solid transparent;
-    border-radius: 7px;
-}
-
 
 
 .fa-github {
@@ -517,17 +422,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-
-.projects{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-    
 }
 
 

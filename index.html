@@ -9,110 +9,94 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href=" https://fontawesome.com/icons/heart?f=classic&s=solid">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-    <nav class="fixed left-0 right-0 ">
-        <div class="nav-items ">
-            <a class="text-white tracking-in-contract-bck-top" href="#home">HOME</a>
-            <a class="text-white tracking-in-contract-bck-top" href="#certifications">CERTIFICATIONS</a>
-            <a class="text-white tracking-in-contract-bck-top" href="#resume1">RESUME</a>
-            <a class="text-white tracking-in-contract-bck-top" href="#projects">PROJECTS</a>
-            <a class="text-white tracking-in-contract-bck-top" href="#about">ABOUT</a>
-            <a class="text-white tracking-in-contract-bck-top" href="#contact">CONTACT</a>
-            
-        </div>
-    </nav>
-    <section id="home" class="hero ">
-
-        <div class=" w-[60%] pl-[10%] pt-[100px]">
-            <p class="text-white text-[200%]">Hello, I'm </p>
-            <h1 class="text-white font-extrabold text-[500%]"> Leticia Sandra Attoh</h1>
-            <h1 class="text-white">AND THIS IS MY RESUME</h1>
-
-        </div>
-
-    </section>
-
-
-
-<!-- START OF CERTIFICATION SECTION -->
-<h2 class="cert text-center text-[200%] text-white pt-[50px]">
-  My <p id="resume1" class="font-extrabold text-[150%]">Certifications</p>
-</h2>
-
-<section id="certifications" class="carousel-container overflow-hidden relative w-full bg-[#333333]">
-  <div class="carousel-track flex items-center animate-marquee">
-    <div class="cert">
-      <img src="./assets/images/mest.jpg" alt="MEST Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/VA.png" alt="VA Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/ibm.jpg" alt="IBM Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/morten.jpg" alt="Morten Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/degree.jpg" alt="Degree Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/delf.jpg" alt="DELF Certification" class="h-24 mx-4">
-    </div>
-    <div>
-      <img src="./assets/images/Kickoff-Badge.png" alt="Kickoff Badge" class="h-24 mx-4">
-    </div>
-    <!-- Duplicate logos for seamless scrolling -->
-    <div class="cert">
-      <img src="./assets/images/mest.jpg" alt="MEST Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/VA.png" alt="VA Certification" class="h-24 mx-4">
-    </div>
-    <div class="cert">
-      <img src="./assets/images/ibm.jpg" alt="IBM Certification" class="h-24 mx-4">
-    </div>
     
-  </div>
+
+<nav class="fixed top-0 left-0 right-0 bg-[#33333386] z-50">
+    <div class="nav-container flex justify-between items-center p-4">
+        <!-- Hamburger Menu for Smaller Screens -->
+        <button class="lg:hidden text-white" onclick="toggleMenu()">
+            <span class="block w-6 h-0.5 bg-white mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="nav-items flex justify-between lg:flex-row lg:w-auto w-full lg:hidden lg:block" id="navLinks">
+            <a class="nav-link" href="#home">HOME</a>
+            <a class="nav-link" href="#resume1">RESUME</a>
+            <a class="nav-link" href="#projects">PROJECTS</a>
+            <a class="nav-link" href="#about">ABOUT</a>
+            <a class="nav-link" href="#contact">CONTACT</a>
+        </div>
+    </div>
+</nav>
+
+
+    
+
+
+    <section id="home" class="hero relative w-full h-screen ">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Overlay -->
+    <div class="relative z-10 w-full h-full flex justify-center items-center text-center text-white px-4 sm:px-8 md:px-16">
+        <div class="w-full md:w-[60%]">
+            <p class="lg:text-[200%] sm:text-[100%]">Hello, I'm</p>
+            <h1 class="font-extrabold lg:text-[500%] sm:text-[250%]">Leticia Sandra Attoh</h1>
+            <h1 class="sm:text-[1.5rem] lg:text-[2rem]">AND THIS IS MY RESUME</h1>
+        </div>
+    </div>
 </section>
 
 
-    <!-- END OF CERTIFICATION -->
+
+
 
 
     <!-- START OF RESUME SECTION -->
-    <h3 class="text-white  bg-[#222222] text-center pb-[10%] text-[200%]">My <p
-            class="font-extrabold text-[150%]">Resume</p>
-    </h3>
-    <section id="resume">
-        <div class="skills">
-            <h2 class=" text-[100] font-extrabold text-[100%] pt-2 text-white ">SKILLS</h2>
-            <br>
-            <ul>
-                <li> <span class="font-extrabold text-[110%]">Languages</span>:HTML|CSS|JavaScript</li>
-                <br>
-                <li> <span class="font-extrabold text-[110%]">Framworks</span>:React|Tailwind</li>
-                <br>
-                <li><span class="font-extrabold text-[100%]">PM</span>: Jira</li>
-                <br>
-                <li> <span class="font-extrabold text-[110%]">Other</span>: Git|Agile</li>
-            </ul>
+<div class="bg-[#222222] p-8">
+    <div>
+        <!-- Title -->
+        <h3 class="text-white text-center pb-8 text-[200%]">
+            My 
+            <p class="font-extrabold text-[150%]">Resume</p>
+        </h3>
 
-        </div>
+        <!-- Resume Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 lg:gap-8 gap-4">
+             <div  data-aos="fade-up" data-aos-duration="1000">
+            <!-- Skills Column -->
+            <div class=" border-1 p-8 rounded-[7px] lg:h-[18%] sm:h-[15%] lg:w-[50%] sm:w-[35%]  bg-[#333]">
+                <h2 class="text-white font-extrabold text-[150%] mb-4">SKILLS</h2>
+                <ul class="text-white space-y-4">
+                    <li>
+                        <span class="font-extrabold text-[110%]">Languages:</span> HTML | CSS | JavaScript
+                    </li>
+                    <li>
+                        <span class="font-extrabold text-[110%]">Frameworks:</span> React | Tailwind
+                    </li>
+                    <li>
+                        <span class="font-extrabold text-[110%]">PM:</span> Jira
+                    </li>
+                    <li>
+                        <span class="font-extrabold text-[110%]">Other:</span> Git | Agile
+                    </li>
+                </ul>
+            </div>
+            </div>
 
-
-       
-
-
-        <div class="experiences">
-            <p class="font-extrabold text-[100%]">MY EXPERIENCE</p>
-            <br>
-            <p>
-            <p class="font-extrabold text-[100%] text-[olive]">Executive Assistant
+            <!-- Additional Column (Placeholder or More Details) -->
+             <div  data-aos="fade-up" data-aos-duration="1000">
+            <div class=" border-1 p-8  rounded-[7px] w-[90%] bg-[#333]">
+                <h2 class="text-white font-extrabold text-[150%] mb-4">EXPERIENCE</h2>
+                <ul class="text-white space-y-4">
+              <p class="font-extrabold text-[100%] text-[olive]">Executive Assistant
                 Mafia Bites/Chia Chia, July 2022 - March 2024 </p>
                 <p>- Represented CEO at meetings in their absence, influencing decisions and ensuring continuity.</p>
             <p>- Prepared communications on behalf of the CEO, ensuring clarity and professionalism.</p>
@@ -166,19 +150,36 @@
             ensuring seamless operations.
             </p>
         </div>
+        </div>
     </section>
+    </div>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+       
+
+
+    </section>
+    </div>
 
     <!-- END OF RESUME -->
 
 
 
+    
 
+    <div class=" bg-[#222222] ">
     <h3 class="text-white  bg-[#222222] text-center pb-[10%] text-[200%]" id="projects">My <p
         class="font-extrabold text-[150%]">Projects</p>
 </h3>
 
 
-  <div class="bg-[#222222] pl-[10%] pr-[10%] projects">
+  <div class="bg-[#222222] pl-[10%] pr-[10%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
     <div>
         <video src="./assets/videos/Montana - Google Chrome 2024-10-19 19-48-08.mp4" autoplay muted loop></video>
     </div>
@@ -210,193 +211,122 @@
   </div>
 
 
-    <!-- START OF ABOUT ME -->
+  </div>
 
-    <h3 id="resume1" class="font-extrabold text-[250%] text-white  bg-[#222222] text-center pt-[15%] pb-[5%] text-[200%]">About
+<!-- About Me -->
+
+    <div class="">
+    <h3 id="resume1" class="font-extrabold text-[250%] text-white bg-[#222222] text-center pt-[15%] pb-[5%] text-[200%]">
+        About
     </h3>
+
+
+     <div  data-aos="fade-up" data-aos-duration="1000">
     <section id="about">
-
-
-
-        <div class=" text-white aboutp">
+        <!-- Text Section -->
+        <div class="text-white aboutp">
             <p class="text-[200%] text-[olive]">Summary</p>
             <br>
-            <p> -Junior Web-Developer</p>
+            <p>- Junior Web-Developer</p>
             <br>
-            <p>- Creative and detail-oriented executive assistant with extensive experience in supporting CEOs and
-                senior executives. </p>
+            <p>- Creative and detail-oriented executive assistant with extensive experience in supporting CEOs and senior executives.</p>
             <br>
-            <p>- Strong skills in multitasking, time management, and maintaining databases and filing systems.
-            </p>
+            <p>- Strong skills in multitasking, time management, and maintaining databases and filing systems.</p>
             <br>
-            <p>- Proven track record in managing emails, preparing communications, organizing meetings, and conducting
-                research.</p>
+            <p>- Proven track record in managing emails, preparing communications, organizing meetings, and conducting research.</p>
             <br>
             <div class="button-flex">
-                <button class="button1 hover:bg-yellow-500" onclick="window.location.href='mailto:leticiaattoh1994@gmail.com?subject=I%20am%20interested%20in%20hiring%20you&body=Hello%20Leticia,'">
-                    HIRE ME
-                  </button>
-                  
-               <a href="https://docs.google.com/document/d/1sGVQwijZvL3hQVtdqMLjmwe0EGfntjCE/edit?usp=sharing&ouid=115416622891934030658&rtpof=true&sd=true" target="_blank"><button class="button2   hover:bg-yellow-500">DOWNLOAD CV</button></a> 
-            </div>
-        </div>
+    <button class="button1 bg-olive hover:bg-yellow-500 transition-transform duration-300 hover:scale-105" onclick="window.location.href='mailto:leticiaattoh1994@gmail.com?subject=I%20am%20interested%20in%20hiring%20you&body=Hello%20Leticia,'">
+        HIRE ME
+    </button>
+    <a href="https://docs.google.com/document/d/1sGVQwijZvL3hQVtdqMLjmwe0EGfntjCE/edit?usp=sharing&ouid=115416622891934030658&rtpof=true&sd=true" target="_blank">
+        <button class="button2 bg-olive hover:bg-yellow-500 transition-transform duration-300 hover:scale-105">
+            DOWNLOAD CV
+        </button>
+    </a>
+</div>
 
+        </div>
+    
+
+        <!-- Image Section -->
+         
         <div class="about-pic">
-            <img src="./assets/images/about-bg.jpg" alt="">
+            <img src="./assets/images/about-bg.jpg" alt="About Image">
+        </div>
         </div>
     </section>
-
-
-
-    <section class=" text-white  bg-[#222222] text-center pb-[5%] ">
-        <p class="font-extrabold text-[200%] pb-[2%]">Testimonials</p>
+</div>
+  <!-- END OF ABOUT -->
 
 
 
 
 
-        <div class="client-testimonials text-white">
-            <div class="ct1">
-
-                <cite> "Leticia has been an invaluable asset to our team. Her attention to detail and proactive approach
-                    ensured that our executive schedules ran smoothly. She consistently handled communications with
-                    professionalism and efficiency. I highly recommend her!"
-
-                    <p class="text-[olive]"> — CEO, Mafia Bites/Chia Chia</p>
-
-                </cite>
-            </div>
-
-            <div class="ct2">
-
-                <cite> "Working with Leticia at the Ghana Civil Aviation Authority was a pleasure. Her ability to
-                    conduct thorough research and manage complex data sets significantly enhanced our projects. She is a
-                    dedicated professional who brings positivity to every task."
-
-                    <p class="text-[olive]  pt-3">— Manager, Ghana Civil Aviation Authority</p>
-                </cite>
-            </div>
-
-            <div class="ct3">
-                <cite>
-
-                    "Leticia's translation skills were instrumental in our international projects. She delivered
-                    accurate and timely translations, which helped bridge communication gaps. Her professionalism and
-                    adaptability make her a standout in her field."
-
-                    <p class="text-[olive]"> — Senior Translator, Ministry of Foreign Affairs and Integration (Benin)
-                    </p>
-                </cite>
-
-
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <h3 id="resume1" class="text-white  bg-[#222222] text-center text-[200%] ">My <p class="font-extrabold text-[150%]">
-            Services</p>
+    <div class="bg-[#222222]">
+    <h3 class="text-white text-center text-[200%]">
+        My <p class="font-extrabold text-[150%]">Services</p>
     </h3>
 
-    <div class="services text-white  bg-[#222222] ">
-
+    <div class="services text-white bg-[#222222]">
+        
         <div class="service1">
-            <h3 class="text-[200%] text-[olive] font-extrabold ">Web Development</h3>
-            <p> Transforming your digital vision into reality, I offer custom web development solutions tailored to your
+            <h3 class="text-[200%] text-[olive] font-extrabold">Web Development</h3>
+                       <p> Transforming your digital vision into reality, I offer custom web development solutions tailored to your
                 unique needs. From responsive designs to seamless user experiences, I ensure your website stands out and
                 performs optimally. Let's collaborate to build a powerful online presence that drives results!</p>
         </div>
 
-        <div class=" service2">
+        <div class="service2">
             <h3 class="text-[200%] text-[olive] font-extrabold">Translation</h3>
-            <p>Bridging language barriers, I provide accurate and culturally nuanced translation services across various
+                       <p>Bridging language barriers, I provide accurate and culturally nuanced translation services across various
                 fields. Whether you need technical documents, marketing materials, or personal texts, I ensure your
                 message resonates in any language. Trust me to deliver clarity and professionalism in every project!</p>
         </div>
 
         <div class="service3">
-            <h3 class="text-[200%] text-[olive] font-extrabold ">Transcription</h3>
+            <h3 class="text-[200%] text-[olive] font-extrabold">Transcription</h3>
             <p>Delivering precise and timely transcription services, I convert audio and video content into clear,
                 written documents. Whether for interviews, podcasts, or meetings, I ensure accuracy and attention to
                 detail in every project. Trust me to capture your content flawlessly, enhancing accessibility and
                 usability!
             </p>
-
         </div>
     </div>
+</div>
 
 
-    <!-- END OF ABOUT -->
+  <!-- Footer -->
 
-    <h3 id="resume1" class="text-white  bg-[#222222] text-center text-[200%] ">Get <p
-            class="font-extrabold text-[100%] pb-[5%]">In Touch</p>
-    </h3>
 
-    <div class="bg-[#222222] footer2">
+    <footer id="contact" class="bg-black text-white py-6">
+    <div class="text-[#9CA393] flex flex-wrap lg:flex-nowrap justify-between gap-6 px-4">
         <div>
-            <h5 class="ml-[5%] pb-6 text-[150%]  text-white">Get In Touch</h5>
+            <p class="text-[#243250] font-bold">EMAIL</p>
+            <p>leticiaattoh1994@gmail.com</p>
         </div>
         <div>
-            <h3 class="text-white text-[150%] ">My Contact Details</h3>
+            <p class="text-[#243250] font-bold">PHONE</p>
+            <p>+233551551878</p>
         </div>
-
+        <div>
+            <p class="text-[#243250] font-bold">ADDRESS</p>
+            <p>Oyarifa Ghana Flag</p>
+            <p>Tsakle's Teak Estate, House No 11</p>
+        </div>
     </div>
-
-    <footer id="contact" class=" footer bg-[#222222] text-white">
-
+</footer>
 
 
-        <div>
-
-            <input class="bg- #333 input1" type="text" placeholder="Your Name">
-            <br>
-            <input class="bg- #333 input2" type="text" placeholder="Your Email">
-            <br>
-            <input class="bg- #333 input3" type="text" placeholder="Your Phone Number">
-            <br>
-            <input class="bg- #333 input4" type="text" placeholder="Write A Message">
-            <span>
-                <button class="send-button font-thin hover:bg-yellow-500" onclick="window.location.href='mailto:leticiaattoh1994@gmail.com?subject=Regarding%20Your%20Services&body=Hello%20Leticia,'">
-                  SEND MESSAGE
-                </button>
-              </span>
-
-            
-        </div>
-
-        <div class=" text-[#9CA393] pt-[2%] ">
-            <div>
-
-                <p class="text-[#243250]">EMAIL</p>
-                <p>leticiaattoh1994@gmail.com</p>
-                <br>
-                <p class="text-[#243250]">PHONE</p>
-                <p> +233551551878</p>
-                <br>
-                <p class="text-[#243250]">ADDRESS</p>
-                <p>Oyarifa Ghana Flag</p>
-                <p>Tsakle's Teak Estate, House nO 11</p>
-            </div>
 
 
-            <section>
-
-
-            </section>
-
-
-    </footer>
-
-
-    <div class="text-[#9CA393]  copyright-item bg-[#222222] pl-[30%] pt-[5%] ">
+    <div class="text-[#9CA393]  copyright-item bg-black pl-[30%] pt-[5%] ">
        
-         <p>Copyright ©2024 All rights reserved | This template is made  by <a class="color text-[olive]" href="">Leticia</a></p>
+        &copy; 2024 LeticiaAttoh. All rights reserved.
       
     </div>
 
-        <div class="bg-[#222222]">
+        <div class="bg-black">
             <div class="social-button sb">
                 
                 <span><a href="https://www.linkedin.com/in/LeticiaSandraAttoh"target="_blank" id="icon-circle" class="fa fa-linkedin"></a></span>
@@ -413,6 +343,13 @@
 
 
 
+
+
+    <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();  // Initialize AOS
+</script>
 
 
 </body>
