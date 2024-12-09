@@ -122,14 +122,6 @@ nav {
 
 
 
-/* .hero {
-    background-image: url(../images/headshot.jpg);
-    background-attachment: fixed;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-} */
 
 .hero {
     background-image: url(../images/hero2.jpg);
@@ -391,11 +383,19 @@ footer {
 }
 
 .fa-linkedin {
-    /* background:#333; */
+    
     color: olive;
 
 
 }
+
+.fa-envelope {
+    
+    color: olive;
+
+
+}
+
 
 .sb {
     display: flex;
@@ -407,11 +407,16 @@ footer {
 
 
 }
-
-.copyright-item{
+.copyright-item {
     width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Ensures text is centered */
+    padding-left: 0; /* Remove left padding if needed */
+    padding-top: 0; /* Remove top padding if needed */
+}
 
-} 
 
 
 #icon-circle {
@@ -422,6 +427,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
