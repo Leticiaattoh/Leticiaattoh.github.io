@@ -42,83 +42,21 @@ nav {
     transform: scale(1.1);
     text-decoration: underline;
 }
-
-/* Toggle Menu Button for Mobile */
-.menu-toggle {
-    background: none;
-    border: none;
-    display: none;
-    cursor: pointer;
+/* Default styles for larger screens */
+.nav-items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Larger spacing for desktop */
+  font-size: 1rem; /* Base font size */
 }
 
-.menu-icon {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    display: block;
-    position: relative;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-    content: "";
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    display: block;
-    position: absolute;
-    transition: transform 0.3s ease;
-}
-
-.menu-icon::before {
-    top: -8px;
-}
-
-.menu-icon::after {
-    bottom: -8px;
-}
-
-/* Responsive Styles */
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-    .nav-items {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        padding-top: 1rem;
-        gap: 1rem;
-        background-color: #333333;
-        position: absolute;
-        top: 71px;
-        left: 0;
-        right: 0;
-        z-index: 10;
-    }
-
-    .nav-items.open {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-icon::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-
-    .menu-icon::after {
-        bottom: 0;
-        transform: rotate(-45deg);
-    }
+  .nav-items {
+    gap: 0.2rem; /* Reduce spacing between links */
+    font-size: 0.6rem; /* Smaller font size for mobile */
+  }
 }
-
-
-.text-white {
-    color: white;
-}
-
 
 
 
@@ -126,7 +64,7 @@ nav {
 .hero {
     background-image: url(../images/hero2.jpg);
     background-color: #333333;
-    background-size: 60%;  /* Ensure the image covers the entire hero section */
+    background-size: 80vh;  /* Ensure the image covers the entire hero section */
     background-position: center;  /* Center the image to prevent it from being cropped */
     background-repeat: no-repeat;  /* Prevent the background from repeating */
     height: 100vh;  /* Full viewport height */
@@ -429,5 +367,8 @@ footer {
     align-items: center;
     
 }
+
+
+
 
 
